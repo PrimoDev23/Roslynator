@@ -5598,4 +5598,18 @@ void M()
       </Option>
     </Options>
   </Analyzer>
+  <Analyzer Identifier="AwaitUsingStatement">
+    <Id>RCS1249</Id>
+    <Title>Await using statement</Title>
+    <MessageFormat>Await the using statement to make the dispose non thread-blocking</MessageFormat>
+    <Category>General</Category>
+    <DefaultSeverity>Warning</DefaultSeverity>
+    <IsEnabledByDefault>true</IsEnabledByDefault>
+    <Samples>
+      <Sample>
+        <Before><![CDATA[using (FileStream fs = new FileStream("", FileMode.Open))]]></Before>
+        <After><![CDATA[await using (FileStream fs = new FileStream("", FileMode.Open))]]></After>
+      </Sample>
+    </Samples>
+  </Analyzer>
 </Analyzers>

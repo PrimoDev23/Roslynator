@@ -2453,6 +2453,18 @@ namespace Roslynator.CSharp
             helpLinkUri:        DiagnosticIdentifiers.UsePatternMatchingToCheckForNullOrViceVersa, 
             customTags:         Array.Empty<string>());
 
+        /// <summary>RCS1249</summary>
+        public static readonly DiagnosticDescriptor AwaitUsingStatement = DiagnosticDescriptorFactory.Default.Create(
+            id:                 DiagnosticIdentifiers.AwaitUsingStatement, 
+            title:              "Await using statement", 
+            messageFormat:      "Await the using statement to make the dispose non thread-blocking", 
+            category:           DiagnosticCategories.General, 
+            defaultSeverity:    DiagnosticSeverity.Warning, 
+            isEnabledByDefault: true, 
+            description:        null, 
+            helpLinkUri:        DiagnosticIdentifiers.AwaitUsingStatement, 
+            customTags:         Array.Empty<string>());
+
         public static partial class ReportOnly
         {
             /// <summary>RCS1014a</summary>

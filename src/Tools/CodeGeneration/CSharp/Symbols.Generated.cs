@@ -255,6 +255,20 @@ namespace Roslynator.CodeGeneration.CSharp
                     break;
                 }
 
+                case "CheckedExpressionSyntax":
+                {
+                    yield return SyntaxKind.CheckedExpression;
+                    yield return SyntaxKind.UncheckedExpression;
+                    break;
+                }
+
+                case "CheckedStatementSyntax":
+                {
+                    yield return SyntaxKind.CheckedStatement;
+                    yield return SyntaxKind.UncheckedStatement;
+                    break;
+                }
+
                 case "ClassDeclarationSyntax":
                 {
                     yield return SyntaxKind.ClassDeclaration;
@@ -623,20 +637,6 @@ namespace Roslynator.CodeGeneration.CSharp
                 case "GroupClauseSyntax":
                 {
                     yield return SyntaxKind.GroupClause;
-                    break;
-                }
-
-                case "CheckedExpressionSyntax":
-                {
-                    yield return SyntaxKind.CheckedExpression;
-                    yield return SyntaxKind.UncheckedExpression;
-                    break;
-                }
-
-                case "CheckedStatementSyntax":
-                {
-                    yield return SyntaxKind.CheckedStatement;
-                    yield return SyntaxKind.UncheckedStatement;
                     break;
                 }
 
